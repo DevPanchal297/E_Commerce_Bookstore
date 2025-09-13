@@ -2,7 +2,7 @@ using System.Diagnostics;
 using Dev.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DevWeb.Controllers
+namespace DevWeb.Areas.Customer.Controllers
 {
     public class HomeController : Controller
     {

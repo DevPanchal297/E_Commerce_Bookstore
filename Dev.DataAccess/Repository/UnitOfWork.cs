@@ -5,25 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using Dev.DataAccess.Data;
 using Dev.DataAccess.Repository.IRepository;
+using Dev.Models;
 
 namespace Dev.DataAccess.Repository
 {
-    public class Category : Repository<Category> ,ICategoryRepository
-    {
+    public class UnitOfWork : IUnitOfWork
+    {        
         private ApplicationDbContext _db;
-        public Category(ApplicationDbContext db) : base(db)
+        public ICategoryRepository Category { get; private set; }
+        public UnitOfWork(ApplicationDbContext db)
         {
             _db = db;
+            Category = new CategoryRepository(_db);
         }
-
         public void Save()
         {
             _db.SaveChanges();
-        }
-
-        public void Update(Category obj)
-        {
-            _db.Update(obj);
         }
     }
 }

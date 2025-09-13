@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dev.Utility
+namespace Dev.Models
 {
-    public static class SD
+    public class Product
     {
 
     }
