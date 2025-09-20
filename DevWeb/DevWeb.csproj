@@ -21,4 +21,8 @@
     <ProjectReference Include="..\Dev.Models\Dev.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\product\" />
+  </ItemGroup>
+
 </Project>
